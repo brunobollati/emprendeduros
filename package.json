@@ -1,7 +1,6 @@
 {
-  "name": "emprendeduros-landing",
+  "name": "emprendeduros",
   "version": "1.0.0",
-  "description": "Landing page for Los Emprendeduros",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
