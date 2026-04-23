@@ -276,6 +276,10 @@ a {
     overflow: hidden;
 }
 
+.hero-partners .container {
+    padding: 0;
+}
+
 .partners-slider {
     width: 100%;
     overflow: hidden;
