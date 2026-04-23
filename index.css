@@ -182,9 +182,9 @@ a {
 .hero-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
 }
 
 .hero-subtitle {
@@ -208,7 +208,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0;
+    padding-bottom: 40px;
 }
 
 .hero-bottom-text {
@@ -259,11 +259,10 @@ a {
 }
 
 .hero-small-logo {
-    width: 60px;
+    width: 100px;
     object-fit: contain;
     z-index: 3;
     position: relative;
-    margin-bottom: 8px;
 }
 
 .hero-partners {
