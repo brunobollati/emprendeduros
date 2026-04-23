@@ -52,4 +52,21 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.boxShadow = 'none';
         }
     });
+
+    // Rotating Text
+    const rotatingText = document.getElementById('rotating-text');
+    if (rotatingText) {
+        const words = ['tu futuro.', 'emprendeduros.', 'fondo tokenizado.'];
+        let currentIndex = 0;
+
+        setInterval(() => {
+            rotatingText.style.opacity = 0;
+            
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % words.length;
+                rotatingText.textContent = words[currentIndex];
+                rotatingText.style.opacity = 1;
+            }, 300);
+        }, 2000);
+    }
 });

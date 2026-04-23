@@ -191,7 +191,7 @@ a {
     color: var(--text-muted);
     line-height: 1.4;
     margin-bottom: 32px;
-    max-width: 500px;
+    max-width: 650px;
 }
 
 .btn-hero {
@@ -217,12 +217,13 @@ a {
 }
 
 .hero-bottom-text h2 {
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 800;
-    letter-spacing: -0.04em;
+    letter-spacing: 0.02em;
     color: #111;
     line-height: 1;
     margin: 0;
+    transition: opacity 0.3s ease;
 }
 
 .hero-visual {
@@ -264,12 +265,24 @@ a {
     padding: 32px 0;
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
 
-.partners-container {
+.partners-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.partners-track {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    width: max-content;
+    animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .partner-logo {
@@ -277,6 +290,7 @@ a {
     max-height: 50px;
     max-width: 150px;
     object-fit: contain;
+    margin-right: 120px;
 }
 
 /* About Section */
