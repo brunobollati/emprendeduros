@@ -79,4 +79,45 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 300);
         }, 2000);
     }
+
+    // Number Counter Animation
+    const countElements = document.querySelectorAll('.count');
+    
+    if (countElements.length > 0) {
+        const animateCounts = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-target'));
+                    const duration = 1500; // 1.5 seconds
+                    const frameDuration = 1000 / 60; // 60fps
+                    const totalFrames = Math.round(duration / frameDuration);
+                    let frame = 0;
+                    
+                    const easeOutQuad = t => t * (2 - t);
+                    
+                    const counter = setInterval(() => {
+                        frame++;
+                        const progress = easeOutQuad(frame / totalFrames);
+                        const currentCount = Math.round(target * progress);
+                        
+                        el.textContent = currentCount;
+                        
+                        if (frame >= totalFrames) {
+                            clearInterval(counter);
+                            el.textContent = target;
+                        }
+                    }, frameDuration);
+                    
+                    observer.unobserve(el);
+                }
+            });
+        };
+        
+        const observer = new IntersectionObserver(animateCounts, {
+            threshold: 0.1
+        });
+        
+        countElements.forEach(el => observer.observe(el));
+    }
 });
