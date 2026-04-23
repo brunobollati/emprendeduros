@@ -765,14 +765,15 @@ a {
 
 .diff-card-bg {
     position: absolute;
-    right: -20px;
-    bottom: -20px;
-    height: 120%;
-    width: auto;
-    opacity: 0.5;
+    right: 0;
+    bottom: 0;
+    height: 90%;
+    width: 90%;
+    object-fit: contain;
+    object-position: bottom right;
+    opacity: 0.8;
     z-index: 1;
     pointer-events: none;
-    transform: scale(1.2);
 }
 
 .diff-cards-col {
