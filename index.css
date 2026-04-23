@@ -184,10 +184,14 @@ a {
 
 /* Hero Section */
 .hero {
-    padding: 140px 0 0 0;
+    padding: 0;
     position: relative;
     background-color: #FAFAFA;
     overflow: hidden;
+}
+
+.hero .hero-container {
+    padding-top: 140px;
 }
 
 .hero-bg-gradient {
@@ -302,14 +306,15 @@ a {
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     background: white;
-    padding: 32px 0;
+    padding: 0;
     position: relative;
     z-index: 2;
     overflow: hidden;
 }
 
 .hero-partners .container {
-    padding: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .partners-slider {
@@ -339,7 +344,12 @@ a {
 
 /* About Section */
 .about {
-    padding: 80px 0;
+    padding: 0;
+}
+
+.about .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .section-tag {
@@ -433,11 +443,12 @@ a {
 /* Stats */
 .stats {
     padding: 0;
-    margin: 80px 0;
+    margin: 0;
 }
 
 .stats .container {
-    padding: 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
@@ -506,7 +517,12 @@ a {
 
 /* How It Works */
 .how-it-works {
-    padding: 120px 0;
+    padding: 0;
+}
+
+.how-it-works .container {
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .hw-container {
@@ -568,8 +584,13 @@ a {
 
 /* FAQ */
 .faq {
-    padding: 100px 0;
+    padding: 0;
     background: var(--bg-alt);
+}
+
+.faq .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .faq h2 {
@@ -624,7 +645,12 @@ a {
 
 /* Capital */
 .capital {
-    padding: 120px 0;
+    padding: 0;
+}
+
+.capital .container {
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .capital-container {
@@ -669,8 +695,13 @@ a {
 
 /* Investments */
 .investments {
-    padding: 100px 0;
+    padding: 0;
     background: var(--bg-alt);
+}
+
+.investments .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .investments h2 {
@@ -715,7 +746,12 @@ a {
 
 /* Podcast */
 .cta-podcast {
-    padding: 80px 0;
+    padding: 0;
+}
+
+.cta-podcast .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .podcast-card {
@@ -763,7 +799,12 @@ a {
 
 /* Form Section */
 .apply-section {
-    padding: 120px 0;
+    padding: 0;
+}
+
+.apply-section .container {
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .apply-container {
@@ -854,7 +895,12 @@ input:focus {
 footer {
     background: #0B1120;
     color: white;
-    padding: 40px 0;
+    padding: 0;
+}
+
+footer .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .footer-container {
