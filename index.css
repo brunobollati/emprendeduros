@@ -368,6 +368,12 @@ a {
     margin-right: 8px;
 }
 
+.section-tag .tag-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+}
+
 .about-card {
     position: relative;
     border-radius: var(--radius-lg);
@@ -700,55 +706,119 @@ a {
     transition: var(--transition);
 }
 
-/* Capital */
-.capital {
+/* Differentiation */
+.differentiation {
     padding: 0;
 }
 
-.capital .container {
+.differentiation .container {
     padding-top: 120px;
     padding-bottom: 120px;
 }
 
-.capital-container {
+.diff-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
+    gap: 40px;
 }
 
-.capital-title h2 {
+.diff-card-main {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.diff-card-main h2 {
     font-size: 3rem;
     line-height: 1.1;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
+    letter-spacing: -1px;
 }
 
-.capital-glow {
-    width: 100px;
-    height: 100px;
-    background: var(--primary-color);
-    filter: blur(80px);
-    border-radius: 50%;
-    margin-top: 40px;
-}
-
-.feature {
+.diff-card-main p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
     margin-bottom: 40px;
+    max-width: 90%;
+    position: relative;
+    z-index: 2;
 }
 
-.feature-icon {
-    font-size: 2rem;
+.btn-diff {
+    align-self: flex-start;
+    padding: 14px 28px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+}
+
+.diff-card-bg {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    height: 120%;
+    width: auto;
+    opacity: 0.5;
+    z-index: 1;
+    pointer-events: none;
+    transform: scale(1.2);
+}
+
+.diff-cards-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.diff-card-small {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    border: 1px solid var(--border-color);
+}
+
+.section-tag-small {
     margin-bottom: 16px;
 }
 
-.feature strong {
-    display: block;
+.diff-card-small h3 {
     font-size: 1.25rem;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    color: var(--text-main);
 }
 
-.feature p {
+.diff-card-small p {
     color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
+
+/* Scroll Animations */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
 
 /* Investments */
 .investments {
