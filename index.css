@@ -1519,9 +1519,32 @@ textarea {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.footer-copyright-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
 .footer-copyright {
     color: #a3a3a3;
     font-size: 0.85rem;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    color: #a3a3a3;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: #fff;
 }
 
 .footer-social {
@@ -1675,5 +1698,11 @@ textarea {
         flex-direction: column-reverse;
         gap: 24px;
         text-align: center;
+    }
+    
+    .footer-copyright-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 }
