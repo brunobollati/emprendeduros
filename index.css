@@ -1055,47 +1055,121 @@ a {
 }
 
 .podcast-card {
-    background: linear-gradient(135deg, #1A1A1A, #0B1120);
+    background: linear-gradient(135deg, #1f1a1a, #2b1f1e, #1a1616);
     border-radius: var(--radius-lg);
-    padding: 60px;
+    padding: 80px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* To allow the lightning bolt to pop out */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-.podcast-card::after {
-    content: '⚡';
-    position: absolute;
-    right: 50px;
-    top: 50%;
-    transform: translateY(-50%) scale(5);
-    opacity: 0.1;
-    color: var(--primary-color);
-}
-
-.podcast-content h2 {
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 16px;
-}
-
-.podcast-content p {
-    font-size: 1.25rem;
-    color: rgba(255,255,255,0.7);
-}
-
-.podcast-buttons {
-    display: flex;
-    gap: 16px;
+.podcast-content {
     position: relative;
     z-index: 2;
 }
 
-.btn-spotify { background: #1DB954; color: white; }
-.btn-apple { background: #8E43E7; color: white; }
+.podcast-content h2 {
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.podcast-pill {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 20px 8px 8px;
+    border-radius: 40px;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.pill-icon {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.podcast-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+    margin-right: 120px; /* Space for the lightning bolt */
+}
+
+.btn-spotify { 
+    background: #183B25; 
+    color: white; 
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-spotify:hover {
+    background: #1d462c;
+}
+
+.btn-small-text {
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-right: 12px;
+    opacity: 0.8;
+}
+
+.btn-logo {
+    height: 24px;
+    object-fit: contain;
+}
+
+.btn-apple { 
+    background: #341A3D; 
+    color: white; 
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-apple:hover {
+    background: #40204b;
+}
+
+.btn-logo-apple {
+    height: 36px;
+    object-fit: contain;
+}
+
+.podcast-rayo {
+    position: absolute;
+    right: -20px;
+    top: -40px;
+    height: 140%;
+    object-fit: contain;
+    z-index: 3;
+    pointer-events: none;
+    filter: drop-shadow(-10px 10px 20px rgba(0,0,0,0.3));
+}
 
 /* Form Section */
 .apply-section {
