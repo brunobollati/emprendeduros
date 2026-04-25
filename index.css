@@ -1463,61 +1463,79 @@ textarea {
 }
 
 /* Footer */
-footer {
-    background: #0B1120;
-    color: white;
-    padding: 0;
+.footer {
+    padding: 60px 0;
+    background-color: var(--bg-color); /* Matches page background */
 }
 
-footer .container {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.footer-container {
+.footer-card {
+    background-color: #171717; /* Dark card background */
+    border-radius: var(--radius-md);
+    padding: 60px 80px 40px;
+    color: #fff;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
 
 .footer-logo {
-    color: var(--primary-color);
-    font-size: 2rem;
+    margin-bottom: 40px;
 }
 
-.footer-links {
+.footer-logo-img {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-nav {
     display: flex;
     gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
 }
 
-.footer-links a {
-    color: rgba(255,255,255,0.7);
-    font-size: 0.9rem;
+.footer-nav a {
+    color: #a3a3a3;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
-    color: white;
+.footer-nav a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-copyright {
+    color: #a3a3a3;
+    font-size: 0.85rem;
 }
 
 .footer-social {
     display: flex;
-    gap: 16px;
+    gap: 20px;
 }
 
 .footer-social a {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.1);
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    transition: var(--transition);
+    transition: opacity 0.3s ease;
 }
 
 .footer-social a:hover {
-    background: var(--primary-color);
+    opacity: 0.7;
 }
 
 /* Responsive */
@@ -1636,5 +1654,22 @@ footer .container {
     
     .hero-bottom-text h2 {
         font-size: 4rem;
+    }
+
+    /* Footer Mobile */
+    .footer-card {
+        padding: 40px 30px 30px;
+    }
+    
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column-reverse;
+        gap: 24px;
+        text-align: center;
     }
 }
