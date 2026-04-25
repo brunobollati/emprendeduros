@@ -43,13 +43,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Simple Form Submission Prevent Default
-    const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('¡Gracias por tu postulación! Nos pondremos en contacto pronto.');
-            form.reset();
+    // Character Counter for Textarea
+    const textarea = document.querySelector('textarea[name="Descripcion"]');
+    const charCount = document.querySelector('.char-count');
+    
+    if (textarea && charCount) {
+        textarea.addEventListener('input', function() {
+            const currentLength = this.value.length;
+            charCount.textContent = `${currentLength}/600`;
+        });
+    }
+
+    // File Upload Name Display
+    const fileInput = document.querySelector('.file-input');
+    const dragText = document.querySelector('.drag-text');
+    const clickText = document.querySelector('.click-text');
+    
+    if (fileInput && dragText && clickText) {
+        fileInput.addEventListener('change', function() {
+            if (this.files && this.files.length > 0) {
+                const fileName = this.files[0].name;
+                dragText.textContent = 'Archivo seleccionado:';
+                clickText.textContent = fileName;
+                clickText.style.color = '#111';
+                clickText.style.fontWeight = '600';
+            } else {
+                dragText.textContent = 'Arrastre su archivo aquí';
+                clickText.textContent = 'o haz clic para seleccionarlo';
+                clickText.style.color = 'var(--text-muted)';
+                clickText.style.fontWeight = 'normal';
+            }
         });
     }
 

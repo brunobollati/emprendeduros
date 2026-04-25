@@ -485,12 +485,6 @@
             <div class="podcast-card">
                 <div class="podcast-content">
                     <h2>Agrega valor<br><span class="text-red">a tu tiempo.</span></h2>
-                    <div class="podcast-pill">
-                        <span class="pill-icon">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E85D04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
-                        </span>
-                        Nuevo capítulo todos los sábados.
-                    </div>
                 </div>
                 <div class="podcast-buttons">
                     <a href="#" class="btn btn-spotify">
@@ -498,7 +492,7 @@
                         <img src="assets/Spotify svg.png" alt="Spotify" class="btn-logo">
                     </a>
                     <a href="#" class="btn btn-apple">
-                        <img src="assets/Apple Podcasts.png" alt="Apple Podcasts" class="btn-logo-apple">
+                        <img src="assets/Frame%207.png" alt="Apple Podcasts" class="btn-logo-apple">
                     </a>
                 </div>
                 <img src="assets/rayo png hero.png" alt="Rayo" class="podcast-rayo">
@@ -510,49 +504,116 @@
     <section class="apply-section" id="aplica">
         <div class="container apply-container">
             <div class="apply-text">
-                <h2>Postula tu empresa<br>al fondo de inversión.</h2>
-                <p>Completa el formulario y nos pondremos en contacto contigo lo antes posible. Buscamos a los próximos líderes de la industria.</p>
+                <div class="section-tag section-tag-small text-red">
+                    <img src="assets/Los%20Emprendeduros%20rayo%20chico.svg" alt="Rayo" class="tag-icon"> CONVOCATORIA ABIERTA · FONDO 2026
+                </div>
+                <h2>Postulá tu empresa<br>al fondo de inversión.</h2>
+                <p>Emprendeduros evalúa proyectos con potencial de escala para conectarlos con capital, mentores estratégicos y una red de inversores activos en Latinoamérica.</p>
+                <div class="time-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    Proceso de postulación: 3 minutos
+                </div>
             </div>
             <div class="apply-form">
-                <form id="contactForm">
+                <form action="https://formsubmit.co/brunoandresb1@gmail.com" method="POST" enctype="multipart/form-data" id="contactForm">
+                    <!-- Config FormSubmit -->
+                    <input type="hidden" name="_subject" value="Nueva Postulación de Empresa - Emprendeduros">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Nombre</label>
-                            <input type="text" placeholder="Tu nombre">
+                            <label><span class="req">*</span> Nombre completo</label>
+                            <input type="text" name="Nombre Completo" placeholder="Ej: Martina Garcia" required>
                         </div>
                         <div class="form-group">
-                            <label>Apellidos</label>
-                            <input type="text" placeholder="Tus apellidos">
+                            <label><span class="req">*</span> Email</label>
+                            <input type="email" name="Email" placeholder="Cactus@jack.com" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Email de la empresa</label>
-                            <input type="email" placeholder="email@empresa.com">
+                            <label><span class="req">*</span> Nombre del proyecto</label>
+                            <input type="text" name="Proyecto" placeholder="Ej: Nexo Labs, Mi app, etc" required>
                         </div>
                         <div class="form-group">
-                            <label>Teléfono (opcional)</label>
-                            <input type="tel" placeholder="+52 ...">
+                            <label><span class="req">*</span> Link del proyecto (Opcional)</label>
+                            <input type="url" name="Link Proyecto" placeholder="https://tuproyecto.com">
                         </div>
                     </div>
+                    
                     <div class="form-group">
-                        <label>Sector</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="sector"> FinTech</label>
-                            <label><input type="radio" name="sector"> PropTech</label>
-                            <label><input type="radio" name="sector"> HealthTech</label>
-                            <label><input type="radio" name="sector"> Otro</label>
+                        <label><span class="req">*</span> Etapa del proyecto</label>
+                        <div class="stage-options">
+                            <label class="stage-card">
+                                <input type="radio" name="Etapa" value="Idea" required>
+                                <div class="stage-content">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1.45.62 2.81 1.5 3.5.76.76 1.23 1.52 1.41 2.5"></path></svg>
+                                    <span>IDEA</span>
+                                </div>
+                            </label>
+                            <label class="stage-card">
+                                <input type="radio" name="Etapa" value="Validacion">
+                                <div class="stage-content">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                    <span>VALIDACIÓN</span>
+                                </div>
+                            </label>
+                            <label class="stage-card">
+                                <input type="radio" name="Etapa" value="Crecimiento">
+                                <div class="stage-content">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+                                    <span>CRECIMIENTO</span>
+                                </div>
+                            </label>
+                            <label class="stage-card">
+                                <input type="radio" name="Etapa" value="Escalando">
+                                <div class="stage-content">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                    <span>ESCALANDO</span>
+                                </div>
+                            </label>
                         </div>
                     </div>
+                    
                     <div class="form-group">
-                        <label>Sube tu Pitch Deck</label>
-                        <div class="file-upload">
-                            <span class="upload-icon">📄</span>
-                            <p>Arrastra y suelta aquí o <strong>busca archivo</strong></p>
-                            <small>Soporta PDF o PPTX hasta 10MB</small>
+                        <div class="label-row">
+                            <label><span class="req">*</span> Descripción del proyecto</label>
+                            <span class="char-count">0/600</span>
+                        </div>
+                        <textarea name="Descripcion" rows="3" maxlength="600" placeholder="Contanos brevemente: ¿Qué hace tu proyecto? ¿A quién va dirigido? ¿Cuál es la propuesta de valor?" required></textarea>
+                    </div>
+                    
+                    <div class="upload-wrapper">
+                        <div class="upload-header">
+                            <span class="upload-title">Envianos tu proyecto aquí.</span>
+                            <span class="upload-emojis">👨🏻‍💻🧑🏽‍💻</span>
+                        </div>
+                        <div class="file-upload-box">
+                            <input type="file" name="attachment" accept=".pdf,.ppt,.pptx,.doc,.xlsx" class="file-input" required>
+                            <div class="upload-content">
+                                <svg class="cloud-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path><polyline points="16 16 12 12 8 16"></polyline><line x1="12" y1="12" x2="12" y2="21"></line></svg>
+                                <p class="drag-text">Arrastre su archivo aquí</p>
+                                <p class="click-text">o haz clic para seleccionarlo</p>
+                                <div class="file-badges">
+                                    <span class="badge">PDF</span>
+                                    <span class="badge">PPT</span>
+                                    <span class="badge">PPTX</span>
+                                    <span class="badge">DOC</span>
+                                    <span class="badge">XLSX</span>
+                                    <span class="badge-max">MAX. 20 MB</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Enviar postulación</button>
+                    
+                    <button type="submit" class="btn btn-primary btn-block btn-submit">Enviar postulación <span class="arrow">></span></button>
+                    
+                    <div class="form-features">
+                        <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Respuesta en 5 días hábiles</div>
+                        <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Red de +80 inversores activos</div>
+                        <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Postulación sin costo</div>
+                    </div>
                 </form>
             </div>
         </div>

@@ -1065,6 +1065,7 @@ a {
     position: relative;
     overflow: visible; /* To allow the lightning bolt to pop out */
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    min-height: 280px;
 }
 
 .podcast-content {
@@ -1075,31 +1076,9 @@ a {
 .podcast-content h2 {
     color: white;
     font-size: 3.5rem;
-    margin-bottom: 24px;
+    margin-bottom: 0;
     letter-spacing: -1px;
     line-height: 1.1;
-}
-
-.podcast-pill {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 8px 20px 8px 8px;
-    border-radius: 40px;
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.9);
-}
-
-.pill-icon {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 12px;
 }
 
 .podcast-buttons {
@@ -1190,11 +1169,40 @@ a {
 .apply-text h2 {
     font-size: 3rem;
     margin-bottom: 24px;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    color: var(--text-main);
 }
 
 .apply-text p {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--text-muted);
+    margin-bottom: 32px;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.time-pill {
+    display: inline-flex;
+    align-items: center;
+    background: #FFF0F2;
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.time-pill svg {
+    margin-right: 8px;
+}
+
+.apply-form {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
 }
 
 .form-group {
@@ -1204,65 +1212,243 @@ a {
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 20px;
 }
 
 label {
     display: block;
-    font-weight: 500;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    color: var(--text-main);
+}
+
+.req {
+    color: var(--primary-color);
+    margin-right: 4px;
 }
 
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
+input[type="url"],
+textarea {
     width: 100%;
-    padding: 16px;
+    padding: 14px 16px;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: var(--transition);
+    background: #FAFAFA;
 }
 
-input:focus {
+input:focus, textarea:focus {
     outline: none;
     border-color: var(--primary-color);
+    background: white;
     box-shadow: 0 0 0 3px rgba(255,26,74,0.1);
 }
 
-.radio-group {
-    display: flex;
-    gap: 24px;
+textarea {
+    resize: vertical;
 }
 
-.radio-group label {
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.char-count {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Stage Cards (Radio Buttons) */
+.stage-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.stage-card {
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+}
+
+.stage-card input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.stage-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: white;
+    transition: all 0.2s ease;
+    text-align: center;
+    gap: 12px;
+}
+
+.stage-content svg {
+    color: var(--primary-color);
+}
+
+.stage-content span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.stage-card input:checked ~ .stage-content {
+    border-color: var(--primary-color);
+    background: #FFF0F2;
+}
+
+.stage-card input:checked ~ .stage-content span {
+    color: var(--primary-color);
+}
+
+.stage-card:hover .stage-content {
+    border-color: #ddd;
+}
+
+/* File Upload Wrapper */
+.upload-wrapper {
+    background: #FAFAFA;
+    border-radius: var(--radius-md);
+    padding: 24px;
+    margin-bottom: 32px;
+}
+
+.upload-header {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-weight: 400;
-    cursor: pointer;
+    margin-bottom: 16px;
 }
 
-.file-upload {
-    border: 2px dashed var(--border-color);
+.upload-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-right: 8px;
+}
+
+.upload-emojis {
+    font-size: 1.2rem;
+}
+
+.file-upload-box {
+    position: relative;
+    border: 1px dashed var(--primary-color);
     border-radius: var(--radius-sm);
-    padding: 40px;
+    background: white;
+    padding: 40px 20px;
     text-align: center;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.2s ease;
 }
 
-.file-upload:hover {
-    border-color: var(--primary-color);
-    background: rgba(255,26,74,0.02);
+.file-upload-box:hover {
+    background: #FFF0F2;
 }
 
-.upload-icon {
-    font-size: 2rem;
-    margin-bottom: 16px;
-    display: block;
+.file-input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cloud-icon {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.drag-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.click-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.file-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.badge, .badge-max {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.badge {
+    background: #FFF0F2;
+    color: var(--primary-color);
+}
+
+.badge-max {
+    background: #F0F0F0;
+    color: var(--text-muted);
+}
+
+/* Submit Button & Features */
+.btn-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    margin-bottom: 24px;
+}
+
+.btn-submit .arrow {
+    margin-left: 8px;
+}
+
+.form-features {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+}
+
+.feature svg {
+    width: 14px;
+    height: 14px;
+    color: #2ECC71; /* Green checkmark */
+    margin-right: 6px;
 }
 
 /* Footer */
