@@ -1724,7 +1724,7 @@ textarea {
 
     /* Fix overflowing text */
     #rotating-text, .hero-bottom-text h2 {
-        font-size: clamp(2rem, 12vw, 3.5rem) !important;
+        font-size: clamp(1.5rem, 8.5vw, 3rem) !important;
         word-break: break-word;
         white-space: normal;
         max-width: 100%;
@@ -1732,8 +1732,13 @@ textarea {
     }
     
     .hero-bottom-text {
-        width: 100%;
-        max-width: 100%;
+        flex: 1;
+        padding-right: 10px;
+    }
+
+    .hero-small-logo {
+        width: 65px;
+        flex-shrink: 0;
     }
     
     .about-content h3 {
