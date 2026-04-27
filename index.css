@@ -1669,6 +1669,20 @@ textarea {
         grid-template-columns: 1fr;
     }
     
+    .stats-container,
+    .investment-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+    
     .podcast-card {
         flex-direction: column;
         text-align: center;
