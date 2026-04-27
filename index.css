@@ -1608,7 +1608,7 @@ textarea {
 
     .hero-container,
     .hw-container,
-    .capital-container,
+    .diff-container,
     .apply-container {
         grid-template-columns: 1fr;
     }
