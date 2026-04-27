@@ -1096,8 +1096,8 @@ a {
 }
 
 .podcast-buttons {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
     position: relative;
     z-index: 2;
@@ -1151,6 +1151,50 @@ a {
 .btn-logo-apple {
     height: 36px;
     object-fit: contain;
+}
+
+.btn-youtube { 
+    background: #3D1A1A; 
+    color: white; 
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-youtube:hover {
+    background: #502020;
+}
+
+.btn-facebook { 
+    background: #1A283D; 
+    color: white; 
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-facebook:hover {
+    background: #203550;
+}
+
+.btn-logo-svg {
+    height: 24px;
+    width: auto;
+    margin-right: 8px;
+}
+
+.btn-main-text {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.2px;
 }
 
 .podcast-rayo {
@@ -1694,7 +1738,8 @@ textarea {
     
     .podcast-buttons {
         margin-right: 0;
-        align-items: center;
+        grid-template-columns: 1fr;
+        justify-items: stretch;
     }
     
     .podcast-rayo {
