@@ -1687,6 +1687,16 @@ textarea {
         flex-direction: column;
         text-align: center;
         gap: 32px;
+        padding: 40px 20px;
+    }
+    
+    .podcast-buttons {
+        margin-right: 0;
+        align-items: center;
+    }
+    
+    .podcast-rayo {
+        display: none;
     }
     
     .form-row {
